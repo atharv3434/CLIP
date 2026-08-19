@@ -1,0 +1,18 @@
+# Default configuration for the visual search prototype
+
+catalog:
+  dir: "data/catalog"
+  metadata_csv: "data/catalog/metadata.csv"   # columns: item_id, filename, title
+
+embedding:
+  provider: "stub"                             # stub (offline, small color+shape vocabulary) | clip (real semantic embeddings, needs internet)
+  clip_model_name: "ViT-B-32"
+  clip_pretrained: "openai"
+
+index:
+  index_dir: "index"
+  index_name: "catalog_index"
+  top_k: 5
+
+logging:
+  level: "INFO"
